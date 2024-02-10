@@ -9,7 +9,7 @@ module.exports = {
   description: "[Nvidia GPU only] High-Quality Image Restoration Following Human Instructions",
   icon: "icon.png",
   menu: async (kernel) => {
-    let installed = await exists(path.resolve(__dirname, "InstructIR", "env"))
+    let installed = await exists(path.resolve(__dirname, "instructir", "env"))
     if (installed) {
       let session = (await kernel.loader.load(path.resolve(__dirname, "session.json"))).resolved
       return [{
@@ -22,7 +22,7 @@ module.exports = {
         href: "start.json?fullscreen=true&run=true",
       }, {
         when: "start.json",
-        on: "<i class='fa-solid fa-rocket'></i> Open AudioLDM2 UI",
+        on: "<i class='fa-solid fa-rocket'></i> Open InstructIR",
         href: (session && session.url ? session.url : "http://127.0.0.1:7860"),
         target: "_blank"
       }]

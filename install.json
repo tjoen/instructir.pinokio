@@ -1,0 +1,69 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git clone https://github.com/mv-lab/InstructIR.git InstructIR"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
+      "path": "InstructIR"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "InstructIR",
+      "env": {
+        "HF_HOME": "../huggingface"
+      }
+    }
+  }, {
+      "method": "shell.enter",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'conda_hook' : 'eval \"$(conda shell.bash hook)\"'}}",
+        "on": [{
+          "event": null,
+          "return": true
+        }]
+      }  
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda create -y -p conda_env",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }  
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate' : 'source env/bin/activate'}} env",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install -r requirements_gradio.txt -e .",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=InstructIR"
+    }
+  }]
+}

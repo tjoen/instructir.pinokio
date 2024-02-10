@@ -2,18 +2,18 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/mv-lab/InstructIR.git InstructIR"
+      "message": "git clone https://github.com/mv-lab/InstructIR.git instructir"
     }
   }, {
     "method": "shell.run",
     "params": {
       "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
-      "path": "InstructIR"
+      "path": "instructir"
     }
   }, {
     "method": "shell.start",
     "params": {
-      "path": "InstructIR",
+      "path": "instructir",
       "env": {
         "HF_HOME": "../huggingface"
       }
@@ -63,7 +63,7 @@
   }, {
     "method": "browser.open",
     "params": {
-      "uri": "/?selected=InstructIR"
+      "uri": "/?selected=instructir"
     }
   }]
 }

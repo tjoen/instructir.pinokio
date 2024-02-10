@@ -2,10 +2,10 @@
   "run": [{
     "method": "shell.start",
     "params": {
-      "path": "InstructIR",
+      "path": "instructir",
       "env": {
         "HF_HOME": "../huggingface",
-        "path": ["{{os.platform() === 'win32' ? path.resolve(cwd, 'InstructIR', 'conda_env', 'Library', 'bin') : path.resolve(cwd, 'InstructIR', 'conda_env', 'bin')}}"]
+        "path": ["{{os.platform() === 'win32' ? path.resolve(cwd, 'instructir', 'conda_env', 'Library', 'bin') : path.resolve(cwd, 'instructir', 'conda_env', 'bin')}}"]
       }
     }
   }, {

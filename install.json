@@ -23,6 +23,20 @@
       }
     },
     {
+    "method": "shell.run",
+    "params": {
+      "message": "copy noise50.png real_fog.png",
+      "path": "instructir/InstructIR/images"
+      }
+    },
+    {
+    "method": "shell.run",
+    "params": {
+      "message": "copy city.jpg a0010.jpg",
+      "path": "instructir/InstructIR/images"
+      }
+    },
+    {
       "method": "shell.enter",
       "params": {
         "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate env' : 'source env/bin/activate env'}}",

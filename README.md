@@ -16,5 +16,4 @@ InstructIR takes as input an image and a human-written instruction for how to im
 
 # Disclaimer
 
-Confirmed working on Windows. Not testen on linux or mac.
-Testing the script, seeing if I get it wo work.
+Confirmed working on Windows. Not tested on linux or mac.

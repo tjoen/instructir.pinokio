@@ -32,7 +32,7 @@
     {
     "method": "shell.run",
     "params": {
-      "message": "{{os.platform() === 'win32' ? 'copy gradio_demo_images\\city.jpg a0010.jpg' : 'cp gradio_demo_images\\city.jpg a0010.jpg'}}",
+      "message": "{{os.platform() === 'win32' ? 'copy gradio_demo_images\\\\city.jpg a0010.jpg' : 'cp gradio_demo_images/city.jpg a0010.jpg'}}",
       "path": "instructir/images"
       }
     },

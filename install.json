@@ -25,15 +25,15 @@
     {
     "method": "shell.run",
     "params": {
-      "message": "copy noise50.png real_fog.png",
-      "path": "instructir/InstructIR/images"
+      "message": "{{os.platform() === 'win32' ? 'copy noise50.png real_fog.png' : 'cp noise50.png real_fog.png'}}",
+      "path": "instructir/images"
       }
     },
     {
     "method": "shell.run",
     "params": {
-      "message": "copy city.jpg a0010.jpg",
-      "path": "instructir/InstructIR/images"
+      "message": "{{os.platform() === 'win32' ? 'copy city.jpg a0010.jpg' : 'cp city.jpg a0010.jpg'}}",
+      "path": "instructir/images"
       }
     },
     {
